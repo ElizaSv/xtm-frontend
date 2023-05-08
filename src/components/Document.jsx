@@ -35,7 +35,7 @@ const finalPrice = parseFloat((sumBeams + sumFoundations + sumGeodezy + sumLoade
 const printableDocument = useRef();
 
 useEffect(()=> {
-    fetch(`http://localhost:5000/users/${localStorage.userId}`, {
+    fetch(`https://xtm-api.onrender.com/users/${localStorage.userId}`, {
     headers: {
       Authorization: `Bearer ${localStorage.token}`
     }
@@ -44,10 +44,6 @@ useEffect(()=> {
     .then((data) => setData(data))
     .catch((error) => console.error(error));
 }, [])
-
-useEffect(() => {
-    console.log("user from document page", data)
-}, [data])
 
 const Printing = () => {
     window.print();
