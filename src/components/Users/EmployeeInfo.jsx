@@ -9,7 +9,7 @@ const [data, setData] = useState(null);
 const [image, setImage] = useState(placeholderImage)
 
 useEffect(()=> {
-        fetch(`http://localhost:5000/users/${userId}`, {
+        fetch(`https://xtm-api.onrender.com/users/${userId}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
