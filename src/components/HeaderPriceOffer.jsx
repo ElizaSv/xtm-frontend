@@ -13,6 +13,7 @@ const Header = (props) => {
   const beams = useRef(); 
   const slab = useRef(); 
   const geodesy = useRef(); 
+  const manitou = useRef(); 
 
   const toggleShow = () => {
     setShowOptions(prev => !prev)
@@ -54,6 +55,10 @@ const Header = (props) => {
           <div>
             <input type="checkbox" id="check-geodesy" name="Geodesy" ref={geodesy} onChange={() => props.geodesyStatus(!geodesy.current.checked)}/>
             <label htmlFor="check-geodesy" className={!props.geodesyS ? "faded" : null}>Geodesy</label>
+          </div>
+          <div>
+            <input type="checkbox" id="check-manitou" name="Manitou" ref={manitou} onChange={() => props.manitouStatus(!manitou.current.checked)}/>
+            <label htmlFor="check-manitou" className={!props.manitouS ? "faded" : null}>Loader Manitou</label>
           </div>
 
         </div>

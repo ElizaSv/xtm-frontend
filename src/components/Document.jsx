@@ -59,7 +59,7 @@ const Printing = () => {
                     <p>Org.nr. 556898-0980</p>
                     <address>Torsgatan 8, 3 TR, 111 23 Stockholm</address>
                     <p>Tel. +46 (0)7 07 1331 01</p>
-                    <Link to="https://xtmbygg.com/" target="_blank">www.xtmbygg.se</Link>
+                    <Link to="https://xtmbygg.se/" target="_blank">www.xtmbygg.se</Link>
                 </div>
                 <div>
                     <img src={Logo} alt="XTM Logo" onClick={() => props.editableStatus(prev => !prev)} title={props.editable ? "Hide Top Header" : "Show Top Header"}/>
@@ -109,10 +109,12 @@ const Printing = () => {
                 <h2>Management, accommodation costs</h2>
                 <Management calcSum={setSumManagement} editable={props.editable} />
             </section>
-            <section id="loader-costs">
-                <h2>Loader Manitou</h2>
-                <LoaderManitou calcSum={setSumLoader} editable={props.editable}/>
-            </section>
+            {props.manitouStatus && 
+                    <section id="loader-costs">
+                        <h2>Loader Manitou</h2>
+                        <LoaderManitou calcSum={setSumLoader} editable={props.editable}/>
+                    </section>
+            }
             {props.geodesyStatus &&
                 <section id="geodesy-costs">
                     <h2>Geodesy works</h2>

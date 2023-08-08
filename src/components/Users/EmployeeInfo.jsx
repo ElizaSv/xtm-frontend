@@ -33,7 +33,7 @@ const handleImageError = (event) => {
     <>
     {data &&
     <div id="employee-greeting">
-       <img src={image} alt="User Profile Photo" onError={handleImageError} />
+       <img src={image} alt={data.user.firstName + " " + data.user.lastName} onError={handleImageError} />
        <h2>You are logged in as <span>{data.user.email}</span> </h2>
        <div>
             <div className="quote-box"><h3><em>The secret behind a great day is a great attitude.</em></h3></div>

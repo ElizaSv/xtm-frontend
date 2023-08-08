@@ -15,18 +15,18 @@ const LoaderManitou = (props) => {
     const ref1 = useRef();
 
     useEffect(() => {
-  setTotal(parseFloat(ref1.current.outerText));
-});
-useEffect(() => {
-  props.calcSum(total)
-}, [total])
+      setTotal(parseFloat(ref1.current.outerText));
+    });
     useEffect(() => {
-  if(!factor) { setFactor(prev => prev + 1)}
+      props.calcSum(total)
+    }, [total])
+    useEffect(() => {
+    if(!factor) { setFactor(prev => prev + 1)}
     }, [factor]);
 
     const toggleVisibility = () => {
-  setVisibility(prev => !prev)
-};
+        setVisibility(prev => !prev)
+    };
   return (
     <>
         <div className={props.editable ? "list-container withShadows" : "list-container"}>

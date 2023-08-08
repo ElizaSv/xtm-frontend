@@ -12,12 +12,13 @@ const PriceOffer = ({onLogout}) => {
     const [beamsStatus, setBeamsStatus] = useState(true);
     const [slabStatus, setSlabStatus] = useState(true);
     const [geodesyStatus, setGeodesyStatus] = useState(true);
+    const [manitouStatus, setManitouStatus] = useState(true); 
     const [editable, setEditable] = useState(true);
  
     return (
     <>  
-      <Header editable={editable} pogStatus={setPogStatus} foundationsStatus={setFoundationsStatus} wallsStatus={setWallsStatus} beamsStatus={setBeamsStatus} slabStatus={setSlabStatus} geodesyStatus={setGeodesyStatus} pogS={pogStatus} foundationsS={foundationsStatus} wallsS={wallsStatus} beamsS={beamsStatus} slabS={slabStatus} geodesyS={geodesyStatus} onLogout={onLogout}/>
-      <Document editableStatus={setEditable} editable={editable} pogStatus={pogStatus} foundationsStatus={foundationsStatus} wallsStatus={wallsStatus} beamsStatus={beamsStatus} slabStatus={slabStatus} geodesyStatus={geodesyStatus}/>
+      <Header editable={editable} pogStatus={setPogStatus} foundationsStatus={setFoundationsStatus} wallsStatus={setWallsStatus} beamsStatus={setBeamsStatus} slabStatus={setSlabStatus} geodesyStatus={setGeodesyStatus} manitouStatus={setManitouStatus} pogS={pogStatus} foundationsS={foundationsStatus} wallsS={wallsStatus} beamsS={beamsStatus} slabS={slabStatus} geodesyS={geodesyStatus} manitouS={manitouStatus} onLogout={onLogout}/>
+      <Document editableStatus={setEditable} editable={editable} pogStatus={pogStatus} foundationsStatus={foundationsStatus} wallsStatus={wallsStatus} beamsStatus={beamsStatus} slabStatus={slabStatus} geodesyStatus={geodesyStatus} manitouStatus={manitouStatus}/>
     </>
   )
 }

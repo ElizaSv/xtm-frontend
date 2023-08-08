@@ -6,7 +6,7 @@ import { faEyeSlash, faEye } from '@fortawesome/free-solid-svg-icons';
 const data = Data.pricePerUnit.beams;
 
 const Beams = (props) => {
-    const [formar, setFormar] = useState(0);
+    const [formar, setFormar] = useState(null);
     const [armering, setArmering] = useState(0);
     const [betong, setBetong] = useState(0);
     const [cellplast, setCellplast] = useState(0);
@@ -41,8 +41,7 @@ const Beams = (props) => {
         <div className="column-3 row-1">Enhet</div>
         <div className="column-4 row-1">Pris</div>
         <div className="column-5 row-1">Sum</div>
-
-        <div className="column-1">Formar</div>
+        <div className="column-1" >Formar</div>
         <input type="number" min={0} id="beams-formar-amount" onChange={(event) => setFormar(event.target.value)} className="column-2" />
         <div className="column-3">{data.veidni.unit}</div>
         <div className="column-4">{(data.veidni.price * factor).toFixed(2)}</div>
