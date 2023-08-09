@@ -70,7 +70,7 @@ const data = {
             },
             ieliekamasDalas: {
                 unit: "pcs",
-                price: 225.86
+                price: 420.00
             },
             mehanismi: {
                 unit: "diena",
