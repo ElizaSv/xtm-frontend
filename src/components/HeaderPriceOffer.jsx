@@ -2,11 +2,12 @@ import Logo from "../logo.svg";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark, faPen } from '@fortawesome/free-solid-svg-icons';
-import { useState, useRef} from "react";
+import { useState, useRef } from "react";
 import Logout from "./Details/Logout";
 
 const Header = (props) => {
   const [showOptions, setShowOptions] = useState(false);
+  
   const pog = useRef();
   const foundations = useRef();
   const walls = useRef(); 
