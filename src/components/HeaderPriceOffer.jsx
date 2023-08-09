@@ -14,6 +14,8 @@ const Header = (props) => {
   const slab = useRef(); 
   const geodesy = useRef(); 
   const manitou = useRef(); 
+  const management = useRef(); 
+
 
   const toggleShow = () => {
     setShowOptions(prev => !prev)
@@ -59,6 +61,10 @@ const Header = (props) => {
           <div>
             <input type="checkbox" id="check-manitou" name="Manitou" ref={manitou} onChange={() => props.manitouStatus(!manitou.current.checked)}/>
             <label htmlFor="check-manitou" className={!props.manitouS ? "faded" : null}>Loader Manitou</label>
+          </div>
+          <div>
+            <input type="checkbox" id="check-management" name="Management" ref={management} onChange={() => props.managementStatus(!management.current.checked)}/>
+            <label htmlFor="check-management" className={!props.managementS ? "faded" : null}>Management costs</label>
           </div>
 
         </div>

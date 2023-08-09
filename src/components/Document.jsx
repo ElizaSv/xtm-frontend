@@ -105,10 +105,12 @@ const Printing = () => {
                     <Slab  calcSum={setSumSlab} editable={props.editable} />
                 </section>
             }        
-            <section id="management-costs">
-                <h2>Management, accommodation costs</h2>
-                <Management calcSum={setSumManagement} editable={props.editable} />
-            </section>
+            {props.managementStatus && 
+                        <section id="management-costs">
+                            <h2>Management, accommodation costs</h2>
+                            <Management calcSum={setSumManagement} editable={props.editable} />
+                        </section>
+            }     
             {props.manitouStatus && 
                     <section id="loader-costs">
                         <h2>Loader Manitou</h2>
