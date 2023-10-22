@@ -8,6 +8,7 @@ const data = Data.pricePerUnit.slab;
 const Slab = (props) => {
     const [formar, setFormar] = useState(0);
     const [formar2, setFormar2] = useState(0);
+    const [formar3, setFormar3] = useState(0);
     const [armering, setArmering] = useState(0);
     const [betong, setBetong] = useState(0);
     const [deformation, setDeformation] = useState(0);
@@ -22,9 +23,10 @@ const Slab = (props) => {
     const ref4 = useRef(); 
     const ref5 = useRef(); 
     const ref6 = useRef(); 
+    const ref7 = useRef(); 
 
     useEffect(() => {
-      setTotal(parseFloat(ref1.current.outerText) + parseFloat(ref2.current.outerText)  + parseFloat(ref3.current.outerText)  + parseFloat(ref4.current.outerText) + parseFloat(ref5.current.outerText) + parseFloat(ref6.current.outerText) );
+      setTotal(parseFloat(ref1.current.outerText) + parseFloat(ref2.current.outerText)  + parseFloat(ref3.current.outerText)  + parseFloat(ref4.current.outerText) + parseFloat(ref5.current.outerText) + parseFloat(ref6.current.outerText) + parseFloat(ref7.current.outerText) );
     });
     useEffect(() => {
       props.calcSum(total)
@@ -56,6 +58,12 @@ const Slab = (props) => {
         <div className="column-3">{data.veidni.unit}</div>
         <div className="column-4">{(data.veidni.price * factor).toFixed(2)}</div>
         <div className="column-5" ref={ref2}>{(formar2 * data.veidni.price * factor).toFixed(2)}</div>
+
+        <div className="column-1">Filigree slab assembley</div>
+        <input type="number" min={0} id="slab-formar-amount" onChange={(event) => setFormar3(event.target.value)} className="column-2" />
+        <div className="column-3">{data.veidni.unit}</div>
+        <div className="column-4">{(180 * factor).toFixed(2)}</div>
+        <div className="column-5" ref={ref7}>{(formar3 * 180 * factor).toFixed(2)}</div>
 
         <div className="column-1">Armering</div>
         <input type="number" min={0} id="slab-armering-amount" onChange={(event) => setArmering(event.target.value)} className="column-2"/>
